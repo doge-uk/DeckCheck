@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeckCheck</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar panel">
+
+        <div class="brand-block">
+          <div>
+            <h1>DeckCheck</h1>
+          </div>
+            <div class="path-header">
+                <input id="folderPath" type="text" placeholder="Path to search here" readonly class="path-input" />
+                <button id="chooseFolder" class="choose-folder">Browse</button>
+            </div>  
+        </div>
+        <div class="window-controls">
+            <button id="minimizeBtn" class="window-btn minimize" aria-label="Minimize">─</button>
+            <button id="closeBtn" class="window-btn close" aria-label="Close">✕</button>
+        </div>
+    </header>
+</header>
+
+      <section class="workspace-grid">
+        <aside class="side-panel panel">
+          <div class="filter-section">
+            <h2>Filters</h2>
+
+            <div class="field-group stacked">
+              <label>Device</label>
+              <div id="deviceList" class="device-list"></div>
+            </div>
+
+            <div class="filter-buttons">
+              <button id="filterPass" class="filter-btn" data-filter="pass">Pass</button>
+              <button id="filterFail" class="filter-Fail" data-filter="fail">Fail</button>
+            </div>
+
+            <button id="runScan" class="primary primary-block scan-button">
+              <span class="scan-label">Search</span>
+              <span class="scan-status" id="scanStatus" style="display: none;">In prog.</span>
+            </button>
+          </div>
+
+          <div class="sidebar-card">
+            <span class="stat-label">Status</span>
+            <p id="statusText" class="status">Ready.</p>
+          </div>
+        </aside>
+
+        <section class="content-grid">
+          <div class="files-section">
+            <article class="panel files-panel">
+              <div class="file-list-header">
+                <span id="fileCountLabel">0 files</span>
+              </div>
+              <div class="search-files">
+                <input type="text" id="fileSearch" placeholder="Search files..." class="file-search-input" />
+              </div>
+              <div id="fileList" class="file-list empty-state">No scan has been run yet.</div>
+            </article>
+          </div>
+
+          <article class="panel details-panel">
+            <div class="details-header">
+              <h2>File Details</h2>
+            </div>
+            <div id="detailsView" class="details empty-state">
+              Select a scanned file to inspect the details.
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

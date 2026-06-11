@@ -1,0 +1,40 @@
+{
+  "name": "deckcheck-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "author": "DeckCheck",
+  "description": "DeckCheck Electron frontend for scanning audio compatibility against Pioneer DJ devices.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build:backend": "cargo build --release --manifest-path ..\\Cargo.toml",
+    "dist": "npm run build:backend && electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.deckcheck.app",
+    "productName": "DeckCheck",
+    "asar": true,
+    "files": [
+      "*.js",
+      "*.html",
+      "*.css"
+    ],
+    "extraResources": [
+      {
+        "from": "..\\target\\release\\deckcheck.exe",
+        "to": "deckcheck.exe"
+      }
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
