@@ -1,6 +1,6 @@
 
 # DeckCheck
-
+![Screenshot of the UI](https://github.com/doge-uk/DeckCheck/blob/main/DeckCheck_tMyVwm5GG5.png?raw=true)
 
 [![Build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://github.com/YOUR_USERNAME/DeckCheck/releases)
 ![GitHub License](https://img.shields.io/github/license/doge-uk/DeckCheck?style=for-the-badge)
