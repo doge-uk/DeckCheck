@@ -141,12 +141,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - [Electron](https://www.electronjs.org/) - Cross-platform desktop framework
 - [Pioneer DJ](https://www.pioneerdj.com/) - For device specifications
 
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/YOUR_USERNAME/DeckCheck](https://github.com/YOUR_USERNAME/DeckCheck)
-
 ---
 
 **Disclaimer**: DeckCheck is an independent tool and is not affiliated with, endorsed by, or connected to Pioneer DJ Corporation. Device specifications are based on publicly available documentation and community testing.
